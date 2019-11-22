@@ -182,6 +182,28 @@ module.exports = {
         ].join(' ')
     },
 
+    quartilemethod: {
+        valType: 'enumerated',
+        values: ['linear', 'exclusive', 'inclusive'],
+        dflt: 'linear',
+        role: 'info',
+        editType: 'calc',
+        description: [
+            'Sets the method used to compute the sample\'s Q1 and Q3 quartiles.',
+
+            'The *linear* method ',
+            '',
+
+            'The *exclusive* method uses the median to divide the ordered data set into two halves',
+            'if the sample is odd, it does include the median in either half -',
+            'Q1 is then the median of the lower half and Q3 the median of the upper half.',
+
+            'The *include* method also uses the median to divided the ordered data set into two halves',
+            'but if the sample is odd, it includes the median in both halves -',
+            'Q1 is then the median of the lower half and Q3 the median of the upper half.'
+        ].join(' ')
+    },
+
     width: {
         valType: 'number',
         min: 0,
