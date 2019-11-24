@@ -44,7 +44,7 @@ module.exports = function legendDefaults(layoutIn, layoutOut, fullData) {
             ) {
                 legendTraceCount++;
             }
-        } else if(trace._dfltShowLegend) { // i.e. *would* be shown by default
+        } else if(trace._dfltShowLegend && trace.showlegend) { // i.e. *would* be shown by default
             legendTraceCount++;
         }
 

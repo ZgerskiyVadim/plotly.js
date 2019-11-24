@@ -1293,7 +1293,10 @@ plots.supplyTraceDefaults = function(traceIn, traceOut, colorIndex, layout, trac
         if(Registry.traceIs(traceOut, 'showLegend')) {
             Lib.coerce(traceIn, traceOut,
                 _module.attributes.showlegend ?
-                _module.attributes : plots.attributes, 'showlegend');
+                _module.attributes :
+                plots.attributes,
+                'showlegend'
+            );
 
             coerce('legendgroup');
 
